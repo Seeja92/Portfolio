@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seeja V M | Full Stack Developer</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        /* background:#0f172a; */
+        background: #0b1f16;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #34d399;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #34d399;
+      }
+
+      .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .hero span {
+        color: #34d399;
+      }
+
+      .hero p {
+        color: #cbd5e1;
+        margin-top: 15px;
+        max-width: 700px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 24px;
+        background: #34d399;
+        color: #08120d;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #34d399;
+      }
+
+      .about {
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
+        color: #cbd5e1;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .skill-card {
+        background: #163026;
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      .skill-card h3 {
+        margin-bottom: 15px;
+        color: #34d399;
+      }
+
+      .skill-card ul {
+        list-style: none;
+      }
+
+      .skill-card li {
+        margin-bottom: 8px;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+      }
+
+      .project-card {
+        background: #163026;
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      .project-card h3 {
+        color: #34d399;
+        margin-bottom: 10px;
+      }
+
+      .project-card p {
+        color: #cbd5e1;
+      }
+
+      .experience-card {
+        background: #163026;
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact p {
+        margin: 10px 0;
+        color: #cbd5e1;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">SEEJA V M</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <h1>Hi, I'm <span>Seeja V M</span></h1>
+
+          <h2>Full Stack Developer</h2>
+
+          <p>React.js | Next.js | Python | Django | PostgreSQL</p>
+
+          <p>
+            Passionate Full Stack Developer with hands-on experience building
+            scalable web applications, REST APIs, authentication systems and
+            modern user interfaces.
+          </p>
+          <a href="/resume/Seeja_VM_Resume.pdf" target="_blank" class="btn">
+            View Resume
+          </a>
+
+          <a href="/resume/Seeja_VM_Resume.pdf" download class="btn">
+            Download Resume
+          </a>
+
+          <a href="https://github.com/Seeja92" class="btn"> GitHub </a>
+
+          <a href="mailto:seejavm@gmail.com" class="btn"> Contact Me </a>
+
+        
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+          <p>
+            I am a Full Stack Developer with hands-on experience in React.js,
+            Next.js, Python, Django, Django REST Framework, PostgreSQL and
+            MySQL. After gaining experience in the IT industry through
+            Automation Testing, RPA and Software Development projects, I
+            transitioned into Full Stack Development and completed a
+            professional internship where I worked on real-world CRM and
+            E-Commerce applications. I enjoy solving complex problems, building
+            scalable web applications and continuously learning new
+            technologies.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Frontend</h3>
+            <ul>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>JavaScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>Django REST Framework</li>
+              <li>REST APIs</li>
+              <li>JWT Authentication</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Database & Tools</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Postman</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects">
+          <div class="project-card">
+            <h3>CRM Application</h3>
+
+            <p>React.js, Django REST Framework, PostgreSQL</p>
+
+            <br />
+
+            <p>
+              Developed Lead, Deal, Task, Ticket and User Management modules.
+              Implemented role-based access control, REST APIs, CRUD operations
+              and dashboard features.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <h3>E-Commerce Application</h3>
+
+            <p>Next.js, Django, Python, PostgreSQL, JWT</p>
+
+            <br />
+
+            <p>
+              Developed a full-stack e-commerce platform with authentication,
+              product management, shopping cart, order management and secure
+              JWT-based login system.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-card">
+          <h3>Full Stack Developer Intern</h3>
+
+          <p>Upcode Software Labs | Nov 2025 – May 2026</p>
+
+          <br />
+
+          <p>
+            Developed full-stack applications using React.js, Next.js, Django,
+            REST APIs and PostgreSQL. Worked on authentication, API integration,
+            debugging and deployment.
+          </p>
+
+          <div class="timeline-item">
+            <h3>Automation Tester</h3>
+            <h4>Tata Consultancy Services | Sep 2021 – Mar 2022</h4>
+            <p>
+              Worked with Python, Selenium, Django and REST APIs. Performed
+              automation testing and defect resolution.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>RPA Support Engineer</h3>
+            <h4>Tata Consultancy Services | Aug 2020 – May 2021</h4>
+            <p>Supported finance and supply chain automation processes.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Java Developer</h3>
+            <h4>Tata Consultancy Services | May 2018 – Dec 2018</h4>
+            <p>Worked on Java development, debugging and migration projects.</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>RPA Developer</h3>
+            <h4>Tata Consultancy Services | Jul 2016 – Apr 2018</h4>
+            <p>
+              Developed enterprise automation solutions using Automation
+              Anywhere.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact">
+          <p>Email: seejavm@gmail.com</p>
+
+          <p>Phone: 7045331062</p>
+
+          <p>Nagercoil, Tamil Nadu</p>
+
+          <p>GitHub: github.com/Seeja92</p>
+        </div>
+      </section>
+
+      <footer>© 2026 Seeja V M | Full Stack Developer</footer>
+    </div>
+  </body>
+</html>
