@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <title>Seeja V M | Full Stack Developer</title>
 
@@ -17,9 +21,9 @@
     />
 
     <style>
-      /* =========================
+      /* =====================================================
          RESET
-      ========================= */
+      ===================================================== */
 
       * {
         margin: 0;
@@ -44,18 +48,18 @@
         -webkit-tap-highlight-color: transparent;
       }
 
-      /* =========================
+      /* =====================================================
          CONTAINER
-      ========================= */
+      ===================================================== */
 
       .container {
         width: min(90%, 1200px);
         margin: auto;
       }
 
-      /* =========================
+      /* =====================================================
          NAVIGATION
-      ========================= */
+      ===================================================== */
 
       nav {
         position: sticky;
@@ -100,21 +104,28 @@
         color: #34d399;
       }
 
-      /* Mobile menu button */
+      /* =====================================================
+         MOBILE MENU BUTTON
+      ===================================================== */
 
       .menu-toggle {
         display: none;
+
         border: none;
         background: transparent;
+
         color: white;
+
         font-size: 28px;
+
         cursor: pointer;
+
         padding: 5px;
       }
 
-      /* =========================
+      /* =====================================================
          HERO
-      ========================= */
+      ===================================================== */
 
       .hero {
         min-height: calc(100vh - 75px);
@@ -135,7 +146,9 @@
 
       .hero h1 {
         font-size: clamp(2.2rem, 6vw, 3.5rem);
+
         line-height: 1.2;
+
         margin-bottom: 12px;
       }
 
@@ -145,48 +158,69 @@
 
       .hero h2 {
         font-size: clamp(1.3rem, 4vw, 2rem);
+
         font-weight: 500;
+
         color: #e2e8f0;
       }
+
+      /* =====================================================
+         AVAILABILITY
+      ===================================================== */
 
       .availability {
         display: inline-block;
 
         margin-top: 18px;
+
         padding: 8px 18px;
 
         border: 1px solid #34d399;
+
         border-radius: 25px;
 
         color: #34d399;
 
         font-size: 14px;
+
         font-weight: 600;
 
         background: rgba(52, 211, 153, 0.08);
       }
 
+      /* =====================================================
+         HERO TEXT
+      ===================================================== */
+
       .hero p {
         color: #cbd5e1;
+
         margin: 18px auto 0;
+
         max-width: 750px;
       }
 
       .hero p:first-of-type {
         color: #34d399;
+
         font-weight: 500;
+
         font-size: 16px;
       }
 
-      /* =========================
+      /* =====================================================
          BUTTONS
-      ========================= */
+      ===================================================== */
 
       .hero-buttons {
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         flex-wrap: wrap;
+
         gap: 12px;
 
         margin-top: 25px;
@@ -194,12 +228,15 @@
 
       .btn {
         display: inline-flex;
+
         justify-content: center;
+
         align-items: center;
 
         padding: 12px 22px;
 
         background: #34d399;
+
         color: #08120d;
 
         text-decoration: none;
@@ -207,35 +244,73 @@
         border-radius: 8px;
 
         font-weight: 600;
+
         font-size: 14px;
 
         border: 1px solid #34d399;
 
-        transition: 0.3s;
+        transition: all 0.3s ease;
+
+        cursor: pointer;
+
+        white-space: nowrap;
       }
 
       .btn:hover {
         transform: translateY(-3px);
+
         box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
       }
 
       .btn-outline {
         background: transparent;
+
         color: #34d399;
       }
 
       .btn-outline:hover {
         background: #34d399;
+
         color: #08120d;
       }
 
+      /* =====================================================
+         WHATSAPP BUTTON
+      ===================================================== */
+
       .whatsapp-btn {
         background: #34d399;
+
+        color: #08120d !important;
+
+        border: 1px solid #34d399;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        visibility: visible;
+
+        opacity: 1;
+
+        white-space: nowrap;
       }
 
-      /* =========================
+      .whatsapp-btn:hover {
+        background: #34d399;
+
+        color: #08120d !important;
+
+        transform: translateY(-3px);
+
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
+      }
+
+      /* =====================================================
          SECTIONS
-      ========================= */
+      ===================================================== */
 
       section {
         padding: 90px 0;
@@ -251,9 +326,9 @@
         color: #34d399;
       }
 
-      /* =========================
+      /* =====================================================
          ABOUT
-      ========================= */
+      ===================================================== */
 
       .about {
         text-align: center;
@@ -267,9 +342,9 @@
         font-size: 16px;
       }
 
-      /* =========================
+      /* =====================================================
          SKILLS
-      ========================= */
+      ===================================================== */
 
       .skills-grid {
         display: grid;
@@ -324,9 +399,9 @@
         color: #cbd5e1;
       }
 
-      /* =========================
+      /* =====================================================
          PROJECTS
-      ========================= */
+      ===================================================== */
 
       .projects {
         display: grid;
@@ -377,9 +452,9 @@
         font-weight: 500;
       }
 
-      /* =========================
+      /* =====================================================
          EXPERIENCE
-      ========================= */
+      ===================================================== */
 
       .experience-card {
         background: #163026;
@@ -433,9 +508,9 @@
         font-size: 14px;
       }
 
-      /* =========================
+      /* =====================================================
          CONTACT
-      ========================= */
+      ===================================================== */
 
       .contact {
         text-align: center;
@@ -461,12 +536,17 @@
 
       .contact a {
         color: #34d399;
+
         text-decoration: none;
       }
 
-      /* =========================
+      .contact .whatsapp-btn {
+        margin-top: 20px;
+      }
+
+      /* =====================================================
          FOOTER
-      ========================= */
+      ===================================================== */
 
       footer {
         text-align: center;
@@ -480,9 +560,9 @@
         border-top: 1px solid rgba(52, 211, 153, 0.08);
       }
 
-      /* =========================
+      /* =====================================================
          TABLET
-      ========================= */
+      ===================================================== */
 
       @media (max-width: 900px) {
         .container {
@@ -502,9 +582,9 @@
         }
       }
 
-      /* =========================
+      /* =====================================================
          MOBILE
-      ========================= */
+      ===================================================== */
 
       @media (max-width: 768px) {
         .container {
@@ -529,7 +609,9 @@
           position: absolute;
 
           top: 70px;
+
           left: 0;
+
           right: 0;
 
           flex-direction: column;
@@ -563,6 +645,10 @@
           font-size: 15px;
         }
 
+        /* =========================
+           MOBILE HERO
+        ========================= */
+
         .hero {
           min-height: auto;
 
@@ -593,19 +679,29 @@
           font-size: 14px;
         }
 
+        /* =========================
+           MOBILE HERO BUTTONS
+        ========================= */
+
         .hero-buttons {
           flex-direction: column;
 
           width: 100%;
 
-          gap: 10px;
+          gap: 12px;
         }
 
         .hero-buttons .btn {
           width: min(100%, 280px);
 
           margin: 0;
+
+          min-height: 45px;
         }
+
+        /* =========================
+           MOBILE SECTIONS
+        ========================= */
 
         section {
           padding: 65px 0;
@@ -619,6 +715,8 @@
           font-size: 14px;
 
           text-align: left;
+
+          line-height: 1.8;
         }
 
         .skills-grid,
@@ -652,6 +750,7 @@
 
         .timeline-item {
           padding-left: 15px;
+
           margin-top: 25px;
         }
 
@@ -667,12 +766,24 @@
           font-size: 13px;
         }
 
+        /* =========================
+           MOBILE CONTACT
+        ========================= */
+
         .contact {
           font-size: 14px;
         }
 
-        .contact .btn {
-          width: min(100%, 280px);
+        .contact .whatsapp-btn {
+          width: min(100%, 300px);
+
+          min-height: 48px;
+
+          padding: 12px 16px;
+
+          font-size: 13px;
+
+          margin-top: 20px;
         }
 
         footer {
@@ -680,9 +791,9 @@
         }
       }
 
-      /* =========================
+      /* =====================================================
          SMALL MOBILE
-      ========================= */
+      ===================================================== */
 
       @media (max-width: 480px) {
         .container {
@@ -737,6 +848,14 @@
           font-size: 13px;
         }
 
+        .contact .whatsapp-btn {
+          width: 100%;
+
+          font-size: 13px;
+
+          padding: 11px 12px;
+        }
+
         .btn {
           font-size: 13px;
 
@@ -749,9 +868,9 @@
   <body>
     <div class="container">
 
-      <!-- =========================
+      <!-- =====================================================
            NAVIGATION
-      ========================== -->
+      ====================================================== -->
 
       <nav>
         <div class="logo">SEEJA V M</div>
@@ -760,23 +879,41 @@
           class="menu-toggle"
           id="menuToggle"
           aria-label="Open navigation menu"
+          type="button"
         >
           ☰
         </button>
 
         <ul id="navMenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#freelance">Freelance</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+
+          <li>
+            <a href="#freelance">Freelance</a>
+          </li>
+
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
 
-      <!-- =========================
+      <!-- =====================================================
            HERO
-      ========================== -->
+      ====================================================== -->
 
       <section class="hero">
         <div class="hero-content">
@@ -785,7 +922,9 @@
             Hi, I'm <span>Seeja V M</span>
           </h1>
 
-          <h2>Full Stack Developer</h2>
+          <h2>
+            Full Stack Developer
+          </h2>
 
           <div class="availability">
             🟢 Open to Freelance Projects
@@ -803,13 +942,18 @@
 
           <div class="hero-buttons">
 
+            <!-- VIEW RESUME -->
+
             <a
               href="resume/Seeja_VM_Resume.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn"
             >
               📄 View Resume
             </a>
+
+            <!-- DOWNLOAD RESUME -->
 
             <a
               href="resume/Seeja_VM_Resume.pdf"
@@ -819,29 +963,36 @@
               ⬇ Download Resume
             </a>
 
+            <!-- WHATSAPP -->
+
             <a
               href="https://wa.me/917045331062?text=Hi%20Seeja,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20freelance%20project%20with%20you."
               target="_blank"
+              rel="noopener noreferrer"
               class="btn whatsapp-btn"
             >
               💬 Start a Project
             </a>
 
+            <!-- GITHUB -->
+
             <a
               href="https://github.com/Seeja92"
               target="_blank"
+              rel="noopener noreferrer"
               class="btn btn-outline"
             >
               GitHub
             </a>
 
           </div>
+
         </div>
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            ABOUT
-      ========================== -->
+      ====================================================== -->
 
       <section id="about">
 
@@ -867,9 +1018,9 @@
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            SKILLS
-      ========================== -->
+      ====================================================== -->
 
       <section id="skills">
 
@@ -880,7 +1031,10 @@
         <div class="skills-grid">
 
           <div class="skill-card">
-            <h3>Frontend</h3>
+
+            <h3>
+              Frontend
+            </h3>
 
             <ul>
               <li>React.js</li>
@@ -890,10 +1044,14 @@
               <li>CSS3</li>
               <li>Bootstrap</li>
             </ul>
+
           </div>
 
           <div class="skill-card">
-            <h3>Backend</h3>
+
+            <h3>
+              Backend
+            </h3>
 
             <ul>
               <li>Python</li>
@@ -902,10 +1060,14 @@
               <li>REST APIs</li>
               <li>JWT Authentication</li>
             </ul>
+
           </div>
 
           <div class="skill-card">
-            <h3>Database & Tools</h3>
+
+            <h3>
+              Database & Tools
+            </h3>
 
             <ul>
               <li>PostgreSQL</li>
@@ -915,15 +1077,16 @@
               <li>Postman</li>
               <li>VS Code</li>
             </ul>
+
           </div>
 
         </div>
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            FREELANCE SERVICES
-      ========================== -->
+      ====================================================== -->
 
       <section id="freelance">
 
@@ -934,58 +1097,78 @@
         <div class="skills-grid">
 
           <div class="skill-card">
-            <h3>🌐 Website Development</h3>
+
+            <h3>
+              🌐 Website Development
+            </h3>
 
             <p>
               Modern, responsive websites for businesses,
               startups, portfolios and personal brands.
             </p>
+
           </div>
 
           <div class="skill-card">
-            <h3>🛒 E-Commerce Development</h3>
+
+            <h3>
+              🛒 E-Commerce Development
+            </h3>
 
             <p>
               Full-stack e-commerce websites with product
               management, authentication, cart and order
               functionality.
             </p>
+
           </div>
 
           <div class="skill-card">
-            <h3>⚙️ Backend Development</h3>
+
+            <h3>
+              ⚙️ Backend Development
+            </h3>
 
             <p>
               Scalable backend applications and REST APIs
               using Python, Django and Django REST Framework.
             </p>
+
           </div>
 
           <div class="skill-card">
-            <h3>📊 Admin Dashboards</h3>
+
+            <h3>
+              📊 Admin Dashboards
+            </h3>
 
             <p>
               Custom admin panels and dashboards for managing
               customers, enquiries, products and business data.
             </p>
+
           </div>
 
           <div class="skill-card">
-            <h3>🐞 Bug Fixing</h3>
+
+            <h3>
+              🐞 Bug Fixing
+            </h3>
 
             <p>
               Debugging and fixing frontend, backend, API,
               database and deployment issues.
             </p>
+
           </div>
 
         </div>
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            PROJECTS
-      ========================== -->
+      ====================================================== -->
 
       <section id="projects">
 
@@ -997,7 +1180,9 @@
 
           <div class="project-card">
 
-            <h3>CRM Application</h3>
+            <h3>
+              CRM Application
+            </h3>
 
             <p class="tech-stack">
               React.js, Django REST Framework, PostgreSQL
@@ -1016,7 +1201,9 @@
 
           <div class="project-card">
 
-            <h3>E-Commerce Application</h3>
+            <h3>
+              E-Commerce Application
+            </h3>
 
             <p class="tech-stack">
               Next.js, Django, Python, PostgreSQL, JWT
@@ -1036,9 +1223,9 @@
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            EXPERIENCE
-      ========================== -->
+      ====================================================== -->
 
       <section id="experience">
 
@@ -1065,6 +1252,8 @@
             deployment.
           </p>
 
+          <!-- EXPERIENCE 1 -->
+
           <div class="timeline-item">
 
             <h3>
@@ -1081,6 +1270,8 @@
             </p>
 
           </div>
+
+          <!-- EXPERIENCE 2 -->
 
           <div class="timeline-item">
 
@@ -1099,6 +1290,8 @@
 
           </div>
 
+          <!-- EXPERIENCE 3 -->
+
           <div class="timeline-item">
 
             <h3>
@@ -1115,6 +1308,8 @@
             </p>
 
           </div>
+
+          <!-- EXPERIENCE 4 -->
 
           <div class="timeline-item">
 
@@ -1137,9 +1332,9 @@
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            CONTACT
-      ========================== -->
+      ====================================================== -->
 
       <section id="contact">
 
@@ -1159,13 +1354,18 @@
             collaborations.
           </p>
 
+          <!-- WHATSAPP CONTACT BUTTON -->
+
           <a
             href="https://wa.me/917045331062?text=Hi%20Seeja,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20freelance%20project%20with%20you."
             target="_blank"
+            rel="noopener noreferrer"
             class="btn whatsapp-btn"
           >
             💬 Start a Project on WhatsApp
           </a>
+
+          <!-- CONTACT DETAILS -->
 
           <div class="contact-details">
 
@@ -1177,7 +1377,8 @@
             </p>
 
             <p>
-              Phone: 7045331062
+              Phone:
+              7045331062
             </p>
 
             <p>
@@ -1189,6 +1390,7 @@
               <a
                 href="https://github.com/Seeja92"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 github.com/Seeja92
               </a>
@@ -1200,9 +1402,9 @@
 
       </section>
 
-      <!-- =========================
+      <!-- =====================================================
            FOOTER
-      ========================== -->
+      ====================================================== -->
 
       <footer>
         © 2026 Seeja V M | Full Stack Developer
@@ -1210,9 +1412,9 @@
 
     </div>
 
-    <!-- =========================
+    <!-- =====================================================
          MOBILE MENU JAVASCRIPT
-    ========================== -->
+    ====================================================== -->
 
     <script>
       const menuToggle = document.getElementById("menuToggle");
@@ -1223,18 +1425,35 @@
 
         if (navMenu.classList.contains("active")) {
           menuToggle.innerHTML = "✕";
+          menuToggle.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+          );
         } else {
           menuToggle.innerHTML = "☰";
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
         }
       });
 
-      // Close menu after clicking a navigation link
-      document.querySelectorAll("#navMenu a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          navMenu.classList.remove("active");
-          menuToggle.innerHTML = "☰";
+      /* Close mobile menu after clicking a navigation link */
+
+      document
+        .querySelectorAll("#navMenu a")
+        .forEach(function (link) {
+          link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+
+            menuToggle.innerHTML = "☰";
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+          });
         });
-      });
     </script>
   </body>
 </html>
