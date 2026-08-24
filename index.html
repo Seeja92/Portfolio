@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Seeja V M | Full Stack Developer</title>
+
+    <meta
+      name="description"
+      content="Seeja V M - Full Stack Developer specializing in React.js, Next.js, Python, Django, PostgreSQL and freelance web development."
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -11,6 +17,10 @@
     />
 
     <style>
+      /* =========================
+         RESET
+      ========================= */
+
       * {
         margin: 0;
         padding: 0;
@@ -18,34 +28,62 @@
         font-family: "Poppins", sans-serif;
       }
 
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
       body {
-        /* background:#0f172a; */
         background: #0b1f16;
         color: white;
         line-height: 1.6;
+        overflow-x: hidden;
       }
 
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* =========================
+         CONTAINER
+      ========================= */
+
       .container {
-        width: 90%;
-        max-width: 1200px;
+        width: min(90%, 1200px);
         margin: auto;
       }
 
+      /* =========================
+         NAVIGATION
+      ========================= */
+
       nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        min-height: 75px;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+
+        background: rgba(11, 31, 22, 0.96);
+        backdrop-filter: blur(10px);
+
+        border-bottom: 1px solid rgba(52, 211, 153, 0.08);
       }
 
       .logo {
         font-size: 24px;
         font-weight: 700;
         color: #34d399;
+        white-space: nowrap;
       }
 
       nav ul {
         display: flex;
+        align-items: center;
         list-style: none;
         gap: 20px;
       }
@@ -53,6 +91,8 @@
       nav a {
         text-decoration: none;
         color: white;
+        font-size: 14px;
+        font-weight: 500;
         transition: 0.3s;
       }
 
@@ -60,89 +100,214 @@
         color: #34d399;
       }
 
+      /* Mobile menu button */
+
+      .menu-toggle {
+        display: none;
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      /* =========================
+         HERO
+      ========================= */
+
       .hero {
-        min-height: 90vh;
+        min-height: calc(100vh - 75px);
+
         display: flex;
         align-items: center;
         justify-content: center;
+
         text-align: center;
+
+        padding: 70px 0;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 850px;
       }
 
       .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 12px;
       }
 
       .hero span {
         color: #34d399;
       }
 
+      .hero h2 {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+        font-weight: 500;
+        color: #e2e8f0;
+      }
+
+      .availability {
+        display: inline-block;
+
+        margin-top: 18px;
+        padding: 8px 18px;
+
+        border: 1px solid #34d399;
+        border-radius: 25px;
+
+        color: #34d399;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        background: rgba(52, 211, 153, 0.08);
+      }
+
       .hero p {
         color: #cbd5e1;
-        margin-top: 15px;
-        max-width: 700px;
+        margin: 18px auto 0;
+        max-width: 750px;
+      }
+
+      .hero p:first-of-type {
+        color: #34d399;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      /* =========================
+         BUTTONS
+      ========================= */
+
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        margin-top: 25px;
       }
 
       .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 12px 24px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 12px 22px;
+
         background: #34d399;
         color: #08120d;
+
         text-decoration: none;
+
         border-radius: 8px;
+
         font-weight: 600;
-        margin-right: 10px;
+        font-size: 14px;
+
+        border: 1px solid #34d399;
+
+        transition: 0.3s;
       }
+
       .btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 0 20px rgba(52, 211, 153, 0.4);
       }
-      .availability {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 8px 18px;
-        border: 1px solid #34d399;
-        border-radius: 25px;
+
+      .btn-outline {
+        background: transparent;
         color: #34d399;
-        font-size: 14px;
-        font-weight: 600;
-        background: rgba(52, 211, 153, 0.08);
       }
 
+      .btn-outline:hover {
+        background: #34d399;
+        color: #08120d;
+      }
+
+      .whatsapp-btn {
+        background: #34d399;
+      }
+
+      /* =========================
+         SECTIONS
+      ========================= */
+
       section {
-        padding: 80px 0;
+        padding: 90px 0;
       }
 
       .section-title {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
+
+        font-size: clamp(1.7rem, 4vw, 2.2rem);
+
+        margin-bottom: 45px;
+
         color: #34d399;
       }
 
+      /* =========================
+         ABOUT
+      ========================= */
+
       .about {
         text-align: center;
+
         max-width: 850px;
+
         margin: auto;
+
         color: #cbd5e1;
+
+        font-size: 16px;
       }
+
+      /* =========================
+         SKILLS
+      ========================= */
 
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(min(100%, 250px), 1fr)
+        );
+
         gap: 20px;
       }
 
       .skill-card {
         background: #163026;
-        padding: 25px;
+
+        padding: 28px;
+
         border-radius: 12px;
+
+        border: 1px solid rgba(52, 211, 153, 0.08);
+
+        transition: 0.3s;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(52, 211, 153, 0.3);
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
 
       .skill-card h3 {
         margin-bottom: 15px;
+
         color: #34d399;
+
+        font-size: 18px;
       }
 
       .skill-card ul {
@@ -151,57 +316,455 @@
 
       .skill-card li {
         margin-bottom: 8px;
+
+        color: #e2e8f0;
       }
+
+      .skill-card p {
+        color: #cbd5e1;
+      }
+
+      /* =========================
+         PROJECTS
+      ========================= */
 
       .projects {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(min(100%, 320px), 1fr)
+        );
+
         gap: 25px;
       }
 
       .project-card {
         background: #163026;
-        padding: 25px;
+
+        padding: 28px;
+
         border-radius: 12px;
+
+        border: 1px solid rgba(52, 211, 153, 0.08);
+
+        transition: 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(52, 211, 153, 0.3);
       }
 
       .project-card h3 {
         color: #34d399;
+
         margin-bottom: 10px;
+
+        font-size: 20px;
       }
 
       .project-card p {
         color: #cbd5e1;
       }
 
+      .tech-stack {
+        color: #34d399 !important;
+
+        font-size: 14px;
+
+        font-weight: 500;
+      }
+
+      /* =========================
+         EXPERIENCE
+      ========================= */
+
       .experience-card {
         background: #163026;
-        padding: 25px;
+
+        padding: 30px;
+
         border-radius: 12px;
+
+        border: 1px solid rgba(52, 211, 153, 0.08);
       }
+
+      .experience-card > h3 {
+        color: #34d399;
+
+        font-size: 21px;
+
+        margin-bottom: 5px;
+      }
+
+      .experience-card > p {
+        color: #cbd5e1;
+      }
+
+      .timeline-item {
+        margin-top: 30px;
+
+        padding-left: 20px;
+
+        border-left: 2px solid #34d399;
+      }
+
+      .timeline-item h3 {
+        color: #34d399;
+
+        font-size: 18px;
+      }
+
+      .timeline-item h4 {
+        color: #e2e8f0;
+
+        font-size: 14px;
+
+        font-weight: 500;
+
+        margin: 5px 0 8px;
+      }
+
+      .timeline-item p {
+        color: #cbd5e1;
+
+        font-size: 14px;
+      }
+
+      /* =========================
+         CONTACT
+      ========================= */
 
       .contact {
         text-align: center;
+
+        max-width: 700px;
+
+        margin: auto;
       }
 
       .contact p {
         margin: 10px 0;
+
         color: #cbd5e1;
       }
 
+      .contact-intro {
+        margin-bottom: 20px !important;
+      }
+
+      .contact-details {
+        margin-top: 30px;
+      }
+
+      .contact a {
+        color: #34d399;
+        text-decoration: none;
+      }
+
+      /* =========================
+         FOOTER
+      ========================= */
+
       footer {
         text-align: center;
-        padding: 20px;
+
+        padding: 30px 15px;
+
         color: #94a3b8;
+
+        font-size: 14px;
+
+        border-top: 1px solid rgba(52, 211, 153, 0.08);
+      }
+
+      /* =========================
+         TABLET
+      ========================= */
+
+      @media (max-width: 900px) {
+        .container {
+          width: 92%;
+        }
+
+        nav ul {
+          gap: 12px;
+        }
+
+        nav a {
+          font-size: 13px;
+        }
+
+        section {
+          padding: 70px 0;
+        }
+      }
+
+      /* =========================
+         MOBILE
+      ========================= */
+
+      @media (max-width: 768px) {
+        .container {
+          width: 90%;
+        }
+
+        nav {
+          min-height: 70px;
+        }
+
+        .logo {
+          font-size: 20px;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        nav ul {
+          display: none;
+
+          position: absolute;
+
+          top: 70px;
+          left: 0;
+          right: 0;
+
+          flex-direction: column;
+
+          align-items: stretch;
+
+          gap: 0;
+
+          background: #10271d;
+
+          border-top: 1px solid rgba(52, 211, 153, 0.15);
+
+          padding: 10px 0;
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        nav li {
+          width: 100%;
+
+          text-align: center;
+        }
+
+        nav a {
+          display: block;
+
+          padding: 12px;
+
+          font-size: 15px;
+        }
+
+        .hero {
+          min-height: auto;
+
+          padding: 80px 0 70px;
+        }
+
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+
+        .hero h2 {
+          font-size: 1.35rem;
+        }
+
+        .availability {
+          font-size: 13px;
+
+          padding: 7px 14px;
+        }
+
+        .hero p {
+          font-size: 14px;
+
+          line-height: 1.7;
+        }
+
+        .hero p:first-of-type {
+          font-size: 14px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+
+          width: 100%;
+
+          gap: 10px;
+        }
+
+        .hero-buttons .btn {
+          width: min(100%, 280px);
+
+          margin: 0;
+        }
+
+        section {
+          padding: 65px 0;
+        }
+
+        .section-title {
+          margin-bottom: 30px;
+        }
+
+        .about {
+          font-size: 14px;
+
+          text-align: left;
+        }
+
+        .skills-grid,
+        .projects {
+          grid-template-columns: 1fr;
+
+          gap: 16px;
+        }
+
+        .skill-card,
+        .project-card,
+        .experience-card {
+          padding: 22px;
+        }
+
+        .skill-card h3 {
+          font-size: 17px;
+        }
+
+        .project-card h3 {
+          font-size: 18px;
+        }
+
+        .experience-card {
+          padding: 22px;
+        }
+
+        .experience-card > h3 {
+          font-size: 18px;
+        }
+
+        .timeline-item {
+          padding-left: 15px;
+          margin-top: 25px;
+        }
+
+        .timeline-item h3 {
+          font-size: 16px;
+        }
+
+        .timeline-item h4 {
+          font-size: 13px;
+        }
+
+        .timeline-item p {
+          font-size: 13px;
+        }
+
+        .contact {
+          font-size: 14px;
+        }
+
+        .contact .btn {
+          width: min(100%, 280px);
+        }
+
+        footer {
+          font-size: 12px;
+        }
+      }
+
+      /* =========================
+         SMALL MOBILE
+      ========================= */
+
+      @media (max-width: 480px) {
+        .container {
+          width: 92%;
+        }
+
+        .hero {
+          padding: 65px 0 55px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero h2 {
+          font-size: 1.2rem;
+        }
+
+        .availability {
+          font-size: 12px;
+
+          padding: 7px 12px;
+        }
+
+        .hero p {
+          font-size: 13px;
+        }
+
+        section {
+          padding: 55px 0;
+        }
+
+        .section-title {
+          font-size: 1.7rem;
+        }
+
+        .skill-card,
+        .project-card,
+        .experience-card {
+          padding: 20px;
+        }
+
+        .skill-card li {
+          font-size: 14px;
+        }
+
+        .project-card p {
+          font-size: 14px;
+        }
+
+        .contact p {
+          font-size: 13px;
+        }
+
+        .btn {
+          font-size: 13px;
+
+          padding: 11px 18px;
+        }
       }
     </style>
   </head>
 
   <body>
     <div class="container">
+
+      <!-- =========================
+           NAVIGATION
+      ========================== -->
+
       <nav>
         <div class="logo">SEEJA V M</div>
-        <ul>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+        >
+          ☰
+        </button>
+
+        <ul id="navMenu">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#freelance">Freelance</a></li>
@@ -211,58 +774,114 @@
         </ul>
       </nav>
 
+      <!-- =========================
+           HERO
+      ========================== -->
+
       <section class="hero">
-        <div>
-          <h1>Hi, I'm <span>Seeja V M</span></h1>
+        <div class="hero-content">
+
+          <h1>
+            Hi, I'm <span>Seeja V M</span>
+          </h1>
 
           <h2>Full Stack Developer</h2>
-          <div class="availability">🟢 Open to Freelance Projects</div>
 
-          <p>React.js | Next.js | Python | Django | PostgreSQL</p>
+          <div class="availability">
+            🟢 Open to Freelance Projects
+          </div>
 
           <p>
-            Passionate Full Stack Developer with hands-on experience building
-            scalable web applications, REST APIs, authentication systems and
-            modern user interfaces.
+            React.js | Next.js | Python | Django | PostgreSQL
           </p>
-          <a href="resume/Seeja_VM_Resume.pdf" target="_blank" class="btn">
-            View Resume
-          </a>
 
-          <a href="resume/Seeja_VM_Resume.pdf" download class="btn">
-            Download Resume
-          </a>
+          <p>
+            I build responsive websites, business applications,
+            e-commerce platforms and custom web solutions using
+            modern frontend and backend technologies.
+          </p>
 
-          <a href="mailto:seejavm@gmail.com" class="btn"> Contact Me </a>
+          <div class="hero-buttons">
 
-          <a href="https://github.com/Seeja92" class="btn"> GitHub </a>
+            <a
+              href="resume/Seeja_VM_Resume.pdf"
+              target="_blank"
+              class="btn"
+            >
+              📄 View Resume
+            </a>
+
+            <a
+              href="resume/Seeja_VM_Resume.pdf"
+              download
+              class="btn btn-outline"
+            >
+              ⬇ Download Resume
+            </a>
+
+            <a
+              href="https://wa.me/917045331062?text=Hi%20Seeja,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20freelance%20project%20with%20you."
+              target="_blank"
+              class="btn whatsapp-btn"
+            >
+              💬 Start a Project
+            </a>
+
+            <a
+              href="https://github.com/Seeja92"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              GitHub
+            </a>
+
+          </div>
         </div>
       </section>
+
+      <!-- =========================
+           ABOUT
+      ========================== -->
 
       <section id="about">
-        <h2 class="section-title">About Me</h2>
+
+        <h2 class="section-title">
+          About Me
+        </h2>
 
         <div class="about">
+
           <p>
-            I am a Full Stack Developer with hands-on experience in React.js,
-            Next.js, Python, Django, Django REST Framework, PostgreSQL and
-            MySQL. After gaining experience in the IT industry through
-            Automation Testing, RPA and Software Development projects, I
-            transitioned into Full Stack Development and completed a
-            professional internship where I worked on real-world CRM and
-            E-Commerce applications. I enjoy solving complex problems, building
-            scalable web applications and continuously learning new
-            technologies.
+            I am a Full Stack Developer with hands-on experience in
+            React.js, Next.js, Python, Django, Django REST Framework,
+            PostgreSQL and MySQL. After gaining experience in the IT
+            industry through Automation Testing, RPA and Software
+            Development projects, I transitioned into Full Stack
+            Development and completed a professional internship where
+            I worked on real-world CRM and E-Commerce applications.
+            I enjoy solving complex problems, building scalable web
+            applications and continuously learning new technologies.
           </p>
+
         </div>
+
       </section>
 
+      <!-- =========================
+           SKILLS
+      ========================== -->
+
       <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
+
+        <h2 class="section-title">
+          Technical Skills
+        </h2>
 
         <div class="skills-grid">
+
           <div class="skill-card">
             <h3>Frontend</h3>
+
             <ul>
               <li>React.js</li>
               <li>Next.js</li>
@@ -275,6 +894,7 @@
 
           <div class="skill-card">
             <h3>Backend</h3>
+
             <ul>
               <li>Python</li>
               <li>Django</li>
@@ -286,6 +906,7 @@
 
           <div class="skill-card">
             <h3>Database & Tools</h3>
+
             <ul>
               <li>PostgreSQL</li>
               <li>MySQL</li>
@@ -295,162 +916,325 @@
               <li>VS Code</li>
             </ul>
           </div>
+
         </div>
+
       </section>
+
+      <!-- =========================
+           FREELANCE SERVICES
+      ========================== -->
+
       <section id="freelance">
-        <h2 class="section-title">Freelance Services</h2>
+
+        <h2 class="section-title">
+          Freelance Services
+        </h2>
 
         <div class="skills-grid">
+
           <div class="skill-card">
             <h3>🌐 Website Development</h3>
+
             <p>
-              Modern, responsive websites for businesses, startups, portfolios
-              and personal brands.
+              Modern, responsive websites for businesses,
+              startups, portfolios and personal brands.
             </p>
           </div>
 
           <div class="skill-card">
             <h3>🛒 E-Commerce Development</h3>
+
             <p>
-              Full-stack e-commerce websites with product management,
-              authentication, cart and order functionality.
+              Full-stack e-commerce websites with product
+              management, authentication, cart and order
+              functionality.
             </p>
           </div>
 
           <div class="skill-card">
             <h3>⚙️ Backend Development</h3>
+
             <p>
-              Scalable backend applications and REST APIs using Python, Django
-              and Django REST Framework.
+              Scalable backend applications and REST APIs
+              using Python, Django and Django REST Framework.
             </p>
           </div>
 
           <div class="skill-card">
             <h3>📊 Admin Dashboards</h3>
+
             <p>
-              Custom admin panels and dashboards for managing customers,
-              enquiries, products and business data.
+              Custom admin panels and dashboards for managing
+              customers, enquiries, products and business data.
             </p>
           </div>
 
           <div class="skill-card">
             <h3>🐞 Bug Fixing</h3>
+
             <p>
-              Debugging and fixing frontend, backend, API, database and
-              deployment issues.
+              Debugging and fixing frontend, backend, API,
+              database and deployment issues.
             </p>
           </div>
+
         </div>
+
       </section>
+
+      <!-- =========================
+           PROJECTS
+      ========================== -->
 
       <section id="projects">
-        <h2 class="section-title">Projects</h2>
+
+        <h2 class="section-title">
+          Projects
+        </h2>
 
         <div class="projects">
+
           <div class="project-card">
+
             <h3>CRM Application</h3>
 
-            <p>React.js, Django REST Framework, PostgreSQL</p>
+            <p class="tech-stack">
+              React.js, Django REST Framework, PostgreSQL
+            </p>
 
             <br />
 
             <p>
-              Developed Lead, Deal, Task, Ticket and User Management modules.
-              Implemented role-based access control, REST APIs, CRUD operations
-              and dashboard features.
+              Developed Lead, Deal, Task, Ticket and User
+              Management modules. Implemented role-based access
+              control, REST APIs, CRUD operations and dashboard
+              features.
             </p>
+
           </div>
 
           <div class="project-card">
+
             <h3>E-Commerce Application</h3>
 
-            <p>Next.js, Django, Python, PostgreSQL, JWT</p>
+            <p class="tech-stack">
+              Next.js, Django, Python, PostgreSQL, JWT
+            </p>
 
             <br />
 
             <p>
-              Developed a full-stack e-commerce platform with authentication,
-              product management, shopping cart, order management and secure
-              JWT-based login system.
+              Developed a full-stack e-commerce platform with
+              authentication, product management, shopping cart,
+              order management and secure JWT-based login system.
             </p>
+
           </div>
+
         </div>
+
       </section>
 
+      <!-- =========================
+           EXPERIENCE
+      ========================== -->
+
       <section id="experience">
-        <h2 class="section-title">Experience</h2>
+
+        <h2 class="section-title">
+          Experience
+        </h2>
 
         <div class="experience-card">
-          <h3>Full Stack Developer Intern</h3>
 
-          <p>Upcode Software Labs | Nov 2025 – May 2026</p>
+          <h3>
+            Full Stack Developer Intern
+          </h3>
+
+          <p>
+            Upcode Software Labs | Nov 2025 – May 2026
+          </p>
 
           <br />
 
           <p>
-            Developed full-stack applications using React.js, Next.js, Django,
-            REST APIs and PostgreSQL. Worked on authentication, API integration,
-            debugging and deployment.
+            Developed full-stack applications using React.js,
+            Next.js, Django, REST APIs and PostgreSQL. Worked on
+            authentication, API integration, debugging and
+            deployment.
           </p>
 
           <div class="timeline-item">
-            <h3>Automation Tester</h3>
-            <h4>Tata Consultancy Services | Sep 2021 – Mar 2022</h4>
+
+            <h3>
+              Automation Tester
+            </h3>
+
+            <h4>
+              Tata Consultancy Services | Sep 2021 – Mar 2022
+            </h4>
+
             <p>
-              Worked with Python, Selenium, Django and REST APIs. Performed
-              automation testing and defect resolution.
+              Worked with Python, Selenium, Django and REST APIs.
+              Performed automation testing and defect resolution.
             </p>
+
           </div>
 
           <div class="timeline-item">
-            <h3>RPA Support Engineer</h3>
-            <h4>Tata Consultancy Services | Aug 2020 – May 2021</h4>
-            <p>Supported finance and supply chain automation processes.</p>
-          </div>
 
-          <div class="timeline-item">
-            <h3>Java Developer</h3>
-            <h4>Tata Consultancy Services | May 2018 – Dec 2018</h4>
-            <p>Worked on Java development, debugging and migration projects.</p>
-          </div>
+            <h3>
+              RPA Support Engineer
+            </h3>
 
-          <div class="timeline-item">
-            <h3>RPA Developer</h3>
-            <h4>Tata Consultancy Services | Jul 2016 – Apr 2018</h4>
+            <h4>
+              Tata Consultancy Services | Aug 2020 – May 2021
+            </h4>
+
             <p>
-              Developed enterprise automation solutions using Automation
-              Anywhere.
+              Supported finance and supply chain automation
+              processes.
             </p>
+
           </div>
+
+          <div class="timeline-item">
+
+            <h3>
+              Java Developer
+            </h3>
+
+            <h4>
+              Tata Consultancy Services | May 2018 – Dec 2018
+            </h4>
+
+            <p>
+              Worked on Java development, debugging and migration
+              projects.
+            </p>
+
+          </div>
+
+          <div class="timeline-item">
+
+            <h3>
+              RPA Developer
+            </h3>
+
+            <h4>
+              Tata Consultancy Services | Jul 2016 – Apr 2018
+            </h4>
+
+            <p>
+              Developed enterprise automation solutions using
+              Automation Anywhere.
+            </p>
+
+          </div>
+
         </div>
+
       </section>
+
+      <!-- =========================
+           CONTACT
+      ========================== -->
 
       <section id="contact">
-        <h2 class="section-title">Let's Work Together</h2>
+
+        <h2 class="section-title">
+          Let's Work Together
+        </h2>
 
         <div class="contact">
-          <p>
-            Have a website idea, business requirement or existing project that
-            needs improvement?
+
+          <p class="contact-intro">
+            Have a website idea, business requirement or existing
+            project that needs improvement?
           </p>
 
-          <p>I'm currently open to freelance projects and collaborations.</p>
+          <p>
+            I'm currently open to freelance projects and
+            collaborations.
+          </p>
 
           <a
-            href="https://wa.me/917045331062?text=Hi%20Seeja,%20I%20would%20like%20to%20discuss%20a%20freelance%20project%20with%20you."
+            href="https://wa.me/917045331062?text=Hi%20Seeja,%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20freelance%20project%20with%20you."
             target="_blank"
-            class="btn"
+            class="btn whatsapp-btn"
           >
-            Start a Project
+            💬 Start a Project on WhatsApp
           </a>
 
-          <p>Email: seejavm@gmail.com</p>
-          <p>Phone: 7045331062</p>
-          <p>Nagercoil, Tamil Nadu</p>
-          <p>GitHub: github.com/Seeja92</p>
+          <div class="contact-details">
+
+            <p>
+              Email:
+              <a href="mailto:seejavm@gmail.com">
+                seejavm@gmail.com
+              </a>
+            </p>
+
+            <p>
+              Phone: 7045331062
+            </p>
+
+            <p>
+              Nagercoil, Tamil Nadu
+            </p>
+
+            <p>
+              GitHub:
+              <a
+                href="https://github.com/Seeja92"
+                target="_blank"
+              >
+                github.com/Seeja92
+              </a>
+            </p>
+
+          </div>
+
         </div>
+
       </section>
-      <footer>© 2026 Seeja V M | Full Stack Developer</footer>
+
+      <!-- =========================
+           FOOTER
+      ========================== -->
+
+      <footer>
+        © 2026 Seeja V M | Full Stack Developer
+      </footer>
+
     </div>
+
+    <!-- =========================
+         MOBILE MENU JAVASCRIPT
+    ========================== -->
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+
+        if (navMenu.classList.contains("active")) {
+          menuToggle.innerHTML = "✕";
+        } else {
+          menuToggle.innerHTML = "☰";
+        }
+      });
+
+      // Close menu after clicking a navigation link
+      document.querySelectorAll("#navMenu a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navMenu.classList.remove("active");
+          menuToggle.innerHTML = "☰";
+        });
+      });
+    </script>
   </body>
 </html>
